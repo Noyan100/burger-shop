@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -64,12 +64,14 @@ html {
 .header {
   background: url(../assets/images/header__background.png) center no-repeat;
   background-size: cover;
+  padding-bottom: 6rem;
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   padding: 5rem 6rem;
+  margin-bottom: 8rem;
 }
 
 .header__logo-icon {
@@ -91,7 +93,7 @@ html {
 .header__text-number::before {
   content: "";
   position: absolute;
-  background: url(../assets/images/header__text-num.png) center no-repeat;
+  background: url(../assets/images/header__text-number.png) center no-repeat;
   right: 25.5rem;
   top: -15px;
   width: 45px;
@@ -109,18 +111,361 @@ html {
 }
 
 .header__menu-item {
-  margin-left: 5rem;
+  margin-left: 7rem;
 }
 
+.header__menu-link {
+  color: #3d2514;
+}
 .header__menu-link:visited {
   color: #3d2514;
 }
 
 .header__about {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 3.5rem;
 }
 
 .header__item {
-  flex: 1 1 50%;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+
+.header__slogan {
+  font-size: 2.4rem;
+  font-family: "Bebas Neue", cursive;
+  color: #3d2514;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%233D2514FF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  display: inline-block;
+  padding: 1.4rem 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.header__title {
+  font-size: 11.4rem;
+  font-family: "Alfa Slab One", cursive;
+  color: #3d2514;
+  text-shadow: 0.5rem 0.5rem 0 #fee7ba;
+  white-space: space;
+  position: relative;
+}
+
+.header__subtitle {
+  font-size: 5.6rem;
+  font-family: "Alfa Slab One", cursive;
+  color: #3d2514;
+  position: absolute;
+  bottom: -6rem;
+  left: 0;
+}
+
+.header__image {
+  position: relative;
+  box-shadow: #ffde9d;
+}
+
+.header__image-price {
+  max-width: 100%;
+  width: 15rem;
+  height: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 4rem;
+  bottom: 4rem;
+  z-index: 1;
+}
+
+.header__image-burger {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.intro__grid {
+  display: grid;
+  grid-template-areas: "one one two two two" "one one three three three";
+  grid-template-rows: 25rem 25rem;
+  gap: 5rem;
+}
+
+.intro-item {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 7rem 11rem;
+}
+
+.intro-item__one {
+  grid-area: one;
+  position: relative;
+  background: url(../assets/images/intro__image-one.png) center no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+}
+
+.intro-item__subtitle {
+  font-size: 2.5rem;
+  font-family: "Bebas Neue", cursive;
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
+.intro-item__title {
+  font-size: 4.2rem;
+  font-family: "Bebas Neue", cursive;
+  margin-left: 3rem;
+}
+
+.intro-item__two {
+  grid-area: two;
+  background: url(../assets/images/intro__image-two.png) center no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+}
+
+.intro-item__three {
+  grid-area: three;
+  background: url(../assets/images/intro__image-three.png) center no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+}
+
+.choose {
+  margin-bottom: 10rem;
+}
+
+.choose__slogan {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Bebas Neue", cursive;
+  background-color: #ffc045;
+  color: #3d2514;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border: 0;
+  padding: 0.8rem 2.5rem 0.6rem;
+  margin-bottom: 3.5rem;
+}
+
+.choose__title-container {
+  color: #3d2514;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.choose__title {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-family: "Alfa Slab One", cursive;
+  margin-bottom: 2rem;
+}
+
+.choose__text {
+  font-size: 1.6rem;
+  margin-bottom: 5rem;
+  line-height: 1.4;
+}
+
+.choose__cards {
+  color: #3d2514;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.choose__card {
+  flex: 1 1 33.333%;
+}
+
+.card__image {
+  width: 45rem;
+  height: 45rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card__title {
+  font-size: 3.7rem;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  margin-bottom: 1.5rem;
+}
+
+.card__text {
+  font-size: 1.7rem;
+  margin: 0 4rem 3.5rem;
+  line-height: 1.2;
+}
+
+.card__button {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: 0;
+  padding: 1.6rem 2.8rem 1.4rem;
+  background-color: #d11818;
+  font-family: "Alfa Slab One", cursive;
+  color: #fff;
+  cursor: pointer;
+}
+
+.tab {
+  margin-bottom: 10rem;
+}
+
+.tab__container {
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 0 4rem;
+}
+
+.tab-item {
+  display: none;
+}
+
+.tab-item--active {
+  color: #3d2514;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tab__subtitle {
+  font-size: 3rem;
+  font-family: "Bebas Neue", cursive;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.tab__title {
+  font-size: 4.2rem;
+  font-family: "Alfa Slab One", cursive;
+  text-transform: uppercase;
+  margin-bottom: 2.8rem;
+}
+
+.tab__text {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.tab-item__two {
+  padding: 0 0 2rem 4rem;
+}
+
+.tab-item__image {
+  width: 650px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.tab__selection {
+  display: flex;
+  width: 80px;
+  justify-content: space-around;
+  position: relative;
+  bottom: 5rem;
+}
+
+.tab__selection-item {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #dcdcdc;
+  cursor: pointer;
+}
+
+.tab__selection-item--active {
+  background-color: #ffc045;
+}
+
+.order__container {
+  color: #3d2514;
+  position: relative;
+}
+
+.order__title-container {
+  text-align: center;
+}
+
+.order__subtitle {
+  font-size: 3rem;
+  font-family: "Bebas Neue", cursive;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.order__title {
+  font-size: 5rem;
+  font-family: "Alfa Slab One", cursive;
+  text-transform: uppercase;
+  margin-bottom: 8rem;
+}
+
+.order__form {
+  display: grid;
+  grid-template: 1fr 1fr 1fr/1fr 1fr;
+  width: 50%;
+  margin: 0 auto;
+  gap: 2.5rem;
+}
+
+.order__input {
+  font-size: 2rem;
+  font-family: "Bebas Neue", cursive;
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #3d2514;
+}
+
+.order__button {
+  font-size: 2rem;
+  text-transform: uppercase;
+  border: 0;
+  background-color: #d11818;
+  font-family: "Alfa Slab One", cursive;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.order__image {
+  position: absolute;
+  max-width: 100%;
+}
+
+.order__image-one {
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 14rem;
+  left: 13rem;
+}
+
+.order__image-two {
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: -10rem;
+  left: 0;
+}
+
+.order__image-three {
+  -o-object-fit: cover;
+     object-fit: cover;
+  right: 0;
+  top: 0;
 }

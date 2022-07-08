@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,4 +47,80 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+.header {
+  background: url(../assets/images/header__background.png) center no-repeat;
+  background-size: cover;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 6rem;
+}
+
+.header__logo-icon {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header__nav {
+  color: #3d2514;
+}
+
+.header__text-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 4rem;
+  position: relative;
+}
+.header__text-number::before {
+  content: "";
+  position: absolute;
+  background: url(../assets/images/header__text-num.png) center no-repeat;
+  right: 25.5rem;
+  top: -15px;
+  width: 45px;
+  height: 45px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Bebas Neue", cursive;
+}
+
+.header__menu-item {
+  margin-left: 5rem;
+}
+
+.header__menu-link:visited {
+  color: #3d2514;
+}
+
+.header__about {
+  display: flex;
+  align-items: center;
+}
+
+.header__item {
+  flex: 1 1 50%;
 }

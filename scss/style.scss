@@ -309,7 +309,7 @@ html{
 }
 .tab__container {
     width: 80%;
-    height: 480px;
+    min-height: 480px;
     margin: 0 auto;
     box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
     padding: 0 4rem;
@@ -349,20 +349,27 @@ html{
 }
 .tab-item__two {
     padding: 0 0 2rem 4rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    min-height: 440px;
+    overflow: hidden;
 }
 .tab-item__image {
     position: absolute;
     top: 0;
     right: 0;
-    width: 650px;
-    object-fit: contain;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
 }
 .tab__selection {
     display: flex;
     width: 80px;
     justify-content: space-around;
     position: relative;
-    top: 40rem;
+    bottom: -45rem;
 }
 .tab__selection-item {
     display: block;
@@ -448,7 +455,7 @@ html{
 .order__image-one {
     object-fit: cover;
     top: 14rem;
-    left: 13rem;
+    left: 0;
 }
 .order__image-two {
     object-fit: cover;
@@ -466,6 +473,7 @@ html{
 
 
 .footer {
+
 }
 .footer__container{
     width: 80%;
@@ -478,7 +486,7 @@ html{
     grid-template-areas:    "title locations"
                             "copy copylinks";
     gap: 15px;
-    padding: 7rem 7rem 1rem;
+    padding: 7rem 7rem 1rem;    
 }
 .footer__title-container {
     grid-area: title;
@@ -541,7 +549,6 @@ html{
     grid-area: copylinks;
     display: flex;
     position: relative;
-    left: 14rem;
 }
 .footer__copy-item {
     position: relative;
@@ -558,5 +565,38 @@ html{
 .footer__copy-link {
     *{
         width: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media(max-width: 1024px){
+    .header__container{
+        margin-bottom: 0;
+    }
+    .header__item{
+        text-align: center;
+    }
+    .header__subtitle{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .header__image-burger{
+        margin-top: 12rem;
+    }
+    .order__form{
+        width: 80%;
+    }
+    .order__title{
+        margin-bottom: 5rem;
+    }
+    .order__image{
+        display: none;
     }
 }

@@ -349,19 +349,30 @@ html {
 
 .tab__container {
   width: 80%;
+  height: 480px;
   margin: 0 auto;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
   padding: 0 4rem;
 }
 
 .tab-item {
-  display: none;
+  color: #3d2514;
+  position: relative;
 }
 
-.tab-item--active {
-  color: #3d2514;
-  display: flex;
-  justify-content: space-around;
+.tab-slider {
+  width: 45%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.tab-slider--active {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.5s 0.1s, opacity 0.5s;
 }
 
 .tab__subtitle {
@@ -388,6 +399,9 @@ html {
 }
 
 .tab-item__image {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 650px;
   -o-object-fit: contain;
      object-fit: contain;
@@ -398,7 +412,7 @@ html {
   width: 80px;
   justify-content: space-around;
   position: relative;
-  bottom: 5rem;
+  top: 40rem;
 }
 
 .tab__selection-item {

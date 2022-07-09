@@ -290,19 +290,27 @@ html{
 }
 .tab__container {
     width: 80%;
+    height: 480px;
     margin: 0 auto;
     box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
     padding: 0 4rem;
 }
 .tab-item {
-    display: none;
-}
-.tab-item--active {
     color: #3d2514;
-    display: flex;
-    justify-content: space-around;
+    position: relative;
 }
-.tab-item__one {
+.tab-slider{
+    width: 45%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(0.9);
+}
+.tab-slider--active{
+    opacity: 1;
+    transform: scale(1);
+    transition: transform .5s .1s, opacity .5s;
 }
 .tab__subtitle {
     font-size: 3rem;
@@ -324,6 +332,9 @@ html{
     padding: 0 0 2rem 4rem;
 }
 .tab-item__image {
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 650px;
     object-fit: contain;
 }
@@ -332,7 +343,7 @@ html{
     width: 80px;
     justify-content: space-around;
     position: relative;
-    bottom: 5rem;
+    top: 40rem;
 }
 .tab__selection-item {
     display: block;

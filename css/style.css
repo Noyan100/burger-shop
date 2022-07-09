@@ -120,6 +120,16 @@ html {
 .header__menu-link:visited {
   color: #3d2514;
 }
+.header__menu-link:hover {
+  text-decoration: underline;
+}
+.header__menu-link:active {
+  color: #281103;
+}
+.header__menu-link:focus {
+  outline: none;
+  text-decoration: underline;
+}
 
 .header__about {
   display: flex;
@@ -322,6 +332,16 @@ html {
   color: #fff;
   cursor: pointer;
 }
+.card__button:hover {
+  background-color: #a81414;
+}
+.card__button:active {
+  background-color: #891111;
+}
+.card__button:focus {
+  background-color: #a81414;
+  outline: none;
+}
 
 .tab {
   margin-bottom: 10rem;
@@ -435,6 +455,16 @@ html {
   padding: 2.5rem;
   border-radius: 8px;
   border: 1px solid #3d2514;
+  color: #464646;
+}
+.order__input::-moz-placeholder {
+  color: #464646;
+}
+.order__input:-ms-input-placeholder {
+  color: #464646;
+}
+.order__input::placeholder {
+  color: #464646;
 }
 
 .order__button {
@@ -446,6 +476,16 @@ html {
   color: #fff;
   cursor: pointer;
   border-radius: 8px;
+}
+.order__button:hover {
+  background-color: #a81414;
+}
+.order__button:active {
+  background-color: #891111;
+}
+.order__button:focus {
+  background-color: #a81414;
+  outline: none;
 }
 
 .order__image {
@@ -510,6 +550,23 @@ html {
   position: relative;
   margin-bottom: 2.5rem;
 }
+.footer__locations-item a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__locations-item a:visited {
+  color: #fff;
+}
+.footer__locations-item a:hover {
+  color: rgba(255, 255, 255, 0.497);
+}
+.footer__locations-item a:active {
+  color: rgba(255, 255, 255, 0.279);
+}
+.footer__locations-item a:focus {
+  color: rgba(255, 255, 255, 0.497);
+  outline: none;
+}
 
 .footer__locations-icon {
   position: absolute;
@@ -540,8 +597,17 @@ html {
   left: 14rem;
 }
 
+.footer__copy-item {
+  position: relative;
+  bottom: 0;
+  transition: 0.4s;
+}
 .footer__copy-item:not(:first-child) {
   margin-left: 1rem;
+}
+.footer__copy-item:hover {
+  position: relative;
+  bottom: 10px;
 }
 
 .footer__copy-link * {

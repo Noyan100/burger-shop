@@ -68,6 +68,16 @@ html{
     &:visited{
         color: #3d2514;
     }
+    &:hover{
+        text-decoration: underline;
+    }
+    &:active{
+        color: #281103;
+    }
+    &:focus{
+        outline: none;
+        text-decoration: underline;
+    }
 }
 .header__about {
     display: flex;
@@ -259,6 +269,16 @@ html{
     font-family: 'Alfa Slab One', cursive;
     color: #fff;
     cursor: pointer;
+    &:hover{
+        background-color: #a81414;
+    }
+    &:active{
+        background-color: #891111;
+    }
+    &:focus{
+        background-color: #a81414;
+        outline: none;
+    }
 }
 
 
@@ -366,6 +386,10 @@ html{
     padding: 2.5rem;
     border-radius: 8px;
     border: 1px solid #3d2514;
+    color: #464646;
+    &::placeholder{
+        color: #464646;
+    }
 }
 .order__button {
     font-size: 2rem;
@@ -376,6 +400,16 @@ html{
     color: #fff;
     cursor: pointer;
     border-radius: 8px;
+    &:hover{
+        background-color: #a81414;
+    }
+    &:active{
+        background-color: #891111;
+    }
+    &:focus{
+        background-color: #a81414;
+        outline: none;
+    }
 }
 .order__image{
     position: absolute;
@@ -437,6 +471,23 @@ html{
 .footer__locations-item {
     position: relative;
     margin-bottom: 2.5rem;
+    a{
+        text-decoration: none;
+        color: #fff;
+        &:visited{
+            color: #fff;
+        }
+        &:hover{
+            color: rgba(255, 255, 255, 0.497);
+        }
+        &:active{
+            color: rgba(255, 255, 255, 0.279);
+        }
+        &:focus{
+            color: rgba(255, 255, 255, 0.497);
+            outline: none;
+        }
+    }
 }
 .footer__locations-icon {
     position: absolute;
@@ -463,8 +514,15 @@ html{
     left: 14rem;
 }
 .footer__copy-item {
+    position: relative;
+    bottom: 0;
+    transition: .4s;
     &:not(:first-child){
         margin-left: 1rem;
+    }
+    &:hover{
+        position: relative;
+        bottom: 10px;
     }
 }
 .footer__copy-link {

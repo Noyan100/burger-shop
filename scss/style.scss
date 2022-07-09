@@ -332,6 +332,7 @@ html{
 
 
 .order {
+    margin-bottom: 10rem;
 }
 .order__container {
     color: #3d2514;
@@ -402,31 +403,72 @@ html{
 
 .footer {
 }
-.footer__container {
+.footer__container{
+    width: 80%;
+    margin: 0 auto;
+    background: url(../assets/images/footer__background.png) center no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    display: grid;
+    grid-template-areas:    "title locations"
+                            "copy copylinks";
+    gap: 15px;
+    padding: 7rem 7rem 1rem;
 }
 .footer__title-container {
+    grid-area: title;
+    margin-bottom: 11rem;
+    width: 70%;
 }
 .footer__logo {
+    margin-bottom: 5rem;
 }
 .footer__logo-image {
 }
 .footer__text {
+    font-size: 1.6rem;
+    line-height: 1.6;
 }
 .footer__locations {
+    grid-area: locations;
+    margin: auto 0;
 }
 .footer__locations-item {
+    position: relative;
+    margin-bottom: 2.5rem;
 }
 .footer__locations-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -4rem;
 }
 .footer__locations-text {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
 }
 .footer__copy {
+    grid-area: copy;
 }
 .footer__copyright {
+    font-size: 1.6rem;
+    text-transform: uppercase;  
 }
 .footer__copy-links {
+    grid-area: copylinks;
+    display: flex;
+    position: relative;
+    left: 14rem;
 }
 .footer__copy-item {
+    &:not(:first-child){
+        margin-left: 1rem;
+    }
 }
 .footer__copy-link {
+    *{
+        width: 25px;
+    }
 }

@@ -803,8 +803,15 @@ html{
     .tab-item__two{
         display: none;
     }
+    .order__subtitle{
+        font-size: 2.5rem;
+    }
     .order__title{
-        font-size: 4rem;
+        font-size: 3rem;
+    }
+    .order__input{
+        font-size: 1.8rem;
+        padding: 1.4rem;
     }
     .footer{
         width: 100%;
@@ -829,5 +836,93 @@ html{
     }
     .footer__copy-links{
         padding: 0 4rem 4rem;
+    }
+}
+
+
+
+@media(max-width: 425px){
+    .header__logo-icon{
+        width: 200px;
+    }
+    .header__menu-button, .header__menu-button::before, .header__menu-button::after{
+        width: 40px;
+        height: 6px;
+    }
+    .header__menu-button{
+        top: 8rem;
+        &::before{
+            top: -12px;
+            left: 0;
+        }
+        &::after{
+            top: 12px;
+            left: 0;
+        }
+    }
+    .header__menu-button--active{
+        background-color: transparent;
+        transition: .1s .25s;
+        &::before{
+            content: '';
+            top: 0;
+            transform: rotateZ(-45deg);
+    
+            transition: top 0.25s, transform .5s .25s;
+        }
+        &::after{
+            content: '';
+            top: 0;
+            transform: rotateZ(45deg);
+    
+            transition: top 0.4s, transform .5s .25s;
+        }
+    }
+    .order__form{
+        grid-template: 1fr 1fr 1fr / 1fr;
+    }
+    .order__button{
+        padding: 2rem;
+    }
+}
+
+
+
+@media(max-width: 320px){
+    html{
+        font-size: 7px;
+    }
+    .header__menu-button, .header__menu-button::before, .header__menu-button::after{
+        width: 35px;
+        height: 5px;
+    }
+    .header__menu-button{
+        top: 8.2rem;
+        &::before{
+            top: -9px;
+            left: 0;
+        }
+        &::after{
+            top: 9px;
+            left: 0;
+        }
+    }
+    .header__menu-button--active{
+        background-color: transparent;
+        transition: .1s .25s;
+        &::before{
+            content: '';
+            top: 0;
+            transform: rotateZ(-45deg);
+    
+            transition: top 0.25s, transform .5s .25s;
+        }
+        &::after{
+            content: '';
+            top: 0;
+            transform: rotateZ(45deg);
+    
+            transition: top 0.4s, transform .5s .25s;
+        }
     }
 }
